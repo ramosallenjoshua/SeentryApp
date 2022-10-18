@@ -41,8 +41,6 @@ class LoginActivity : AppCompatActivity() {
             if(binding.loginEmailEditText.text.toString().equals(adminemail)&&binding.loginPasswordEditText.text.toString().equals(adminpass)){
                 val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
-            }else{
-                Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
             }
         }
     }
