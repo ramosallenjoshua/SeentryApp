@@ -23,4 +23,7 @@
     <string name="datejoined"><![CDATA[<datejoined>]]></string>
     <string name="edit_profile">Edit Profile</string>
     <string name="todo">TODO</string>
+    <string name="logoutconfirm">Do you wish log out?</string>
+    <string name="logoutConfirmText">Yes</string>
+    <string name="logoutDenyText">No</string>
 </resources>
