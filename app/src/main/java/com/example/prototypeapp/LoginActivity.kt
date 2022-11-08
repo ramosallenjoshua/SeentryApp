@@ -25,20 +25,23 @@ class LoginActivity : AppCompatActivity() {
             val adminemail = "admin"
             val adminpass = "admin"
 
-            if(email.isNotEmpty() && password.isNotEmpty()){
-                firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener{
-                    if(it.isSuccessful){
-                        val intent = Intent(this, HomeActivity::class.java)
-                        startActivity(intent)
-                        finish()
-                    }else{
-                        Toast.makeText(this, it.exception.toString(),Toast.LENGTH_SHORT)
-                    }
-                }
-            }else{
+            if (email.isEmpty() || password.isEmpty()){
                 Toast.makeText(this, "Missing Fields", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
-            if(binding.loginEmailEditText.text.toString().equals(adminemail)&&binding.loginPasswordEditText.text.toString().equals(adminpass)){
+
+            firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener{
+                if (!it.isSuccessful){
+                    Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                    return@addOnCompleteListener
+                }
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+
+            //Temp Admin pass for Offline Viewing
+            if(binding.loginEmailEditText.text.toString() == adminemail && binding.loginPasswordEditText.text.toString() == adminpass){
                 val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
             }
