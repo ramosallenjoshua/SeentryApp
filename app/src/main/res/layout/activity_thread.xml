@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#d9d9d9"
-    tools:context=".MailFragment">
+    android:layout_height="match_parent"
+    tools:context=".ThreadActivitu">
 
-    <!-- TODO: Update blank fragment layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,9 +15,6 @@
             android:layout_width="412dp"
             android:layout_height="49dp"
             android:background="#262626"
-            android:text="Inbox"
-            android:textColor="#d9d9d9"
-            android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -35,22 +29,23 @@
             app:layout_constraintTop_toTopOf="@+id/textView2" />
 
         <RelativeLayout
-            android:layout_width="370dp"
-            android:layout_height="90dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="15dp"
-            android:background=""
             app:layout_constraintBottom_toBottomOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.241">
+            app:layout_constraintVertical_bias="0.241"
+            android:layout_width="287dp"
+            android:layout_height="84dp"
+            android:layout_gravity="center"
+            android:background=""
+            tools:layout_editor_absoluteX="83dp"
+            tools:layout_editor_absoluteY="319dp">
 
             <ImageView
                 android:id="@+id/pic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/Pic" />
@@ -62,9 +57,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
                 android:layout_toRightOf="@id/pic"
-                android:text="Detective Gian"
+                android:text="He is in SM near Dunkin"
                 android:textColor="#4a4a4a"
-                android:textSize="16sp" />
+                android:textSize="12sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -72,7 +67,7 @@
                 android:layout_below="@id/message_name"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/pic"
-                android:text="seen 1d"
+                android:text="30 mins ago"
                 android:textColor="#9b9b9b"
                 android:textSize="12sp" />
 
@@ -80,22 +75,23 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="370dp"
-            android:layout_height="90dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="15dp"
-            android:background=""
             app:layout_constraintBottom_toBottomOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.095">
+            app:layout_constraintVertical_bias="0.095"
+            android:layout_width="287dp"
+            android:layout_height="91dp"
+            android:layout_gravity="center"
+            android:background=""
+            tools:layout_editor_absoluteX="83dp"
+            tools:layout_editor_absoluteY="229dp">
 
             <ImageView
                 android:id="@+id/pic_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/Pic" />
@@ -107,9 +103,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
                 android:layout_toRightOf="@id/pic_2"
-                android:text="Detective Josh"
+                android:text="I last saw him around Session Road"
                 android:textColor="#4a4a4a"
-                android:textSize="16sp" />
+                android:textSize="12sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -117,29 +113,30 @@
                 android:layout_below="@id/message_name_2"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/pic_2"
-                android:text="Sent 3hrs"
+                android:text="1 hour ago"
                 android:textColor="#9b9b9b"
                 android:textSize="12sp" />
 
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="370dp"
-            android:layout_height="90dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="15dp"
-            android:background=""
             app:layout_constraintBottom_toBottomOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.386">
+            app:layout_constraintVertical_bias="0.386"
+            android:layout_width="286dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:background=""
+            tools:layout_editor_absoluteX="83dp"
+            tools:layout_editor_absoluteY="139dp">
 
             <ImageView
                 android:id="@+id/pic_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/Pic" />
@@ -151,9 +148,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
                 android:layout_toRightOf="@id/pic_3"
-                android:text="Dela Cruz Family Contacts"
+                android:text="I last saw him around John Hay"
                 android:textColor="#4a4a4a"
-                android:textSize="16sp" />
+                android:textSize="12sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -161,24 +158,25 @@
                 android:layout_below="@id/message_name_3"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/pic_3"
-                android:text="Thank you. - 1d"
+                android:text="3 hours ago"
                 android:textColor="#9b9b9b"
                 android:textSize="12sp" />
 
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="370dp"
-            android:layout_height="90dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="15dp"
-            android:background=""
             app:layout_constraintBottom_toBottomOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.53">
+            app:layout_constraintVertical_bias="0.53"
+            android:layout_width="370dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:background=""
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="49dp">
 
             <ImageView
                 android:id="@+id/pic_4"
@@ -195,9 +193,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
                 android:layout_toRightOf="@id/pic_4"
-                android:text="Brgy. Capt. Quirino Hill"
+                android:text="Any clues for John Doe?"
                 android:textColor="#4a4a4a"
-                android:textSize="16sp" />
+                android:textSize="12sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -205,12 +203,13 @@
                 android:layout_below="@id/message_name_4"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/pic_4"
-                android:text="Seen 3d"
+                android:text="8 hours ago"
                 android:textColor="#9b9b9b"
                 android:textSize="12sp" />
 
         </RelativeLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </ScrollView>
