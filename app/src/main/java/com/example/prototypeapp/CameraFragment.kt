@@ -35,7 +35,10 @@ class CameraFragment : Fragment() {
 
         takePhoto.setOnClickListener{
             Toast.makeText(activity, "Opening Camera", Toast.LENGTH_SHORT).show()
-            if(ContextCompat.checkSelfPermission(requireActivity(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){ ActivityCompat.requestPermissions(HomeActivity(), arrayOf(Manifest.permission.CAMERA), CAMERA_PERMISSION_CODE)
+            if(ContextCompat.checkSelfPermission(requireActivity(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
+                requestPermissions(arrayOf(Manifest.permission.CAMERA), CAMERA_PERMISSION_CODE)
+                //ActivityCompat.requestPermissions(HomeActivity(), arrayOf(Manifest.permission.CAMERA), CAMERA_PERMISSION_CODE)
+                return@setOnClickListener
             }
             val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
             startActivityForResult(intent, CAMERA_REQUEST_CODE)
