@@ -2,28 +2,24 @@ package com.example.prototypeapp
 
 import android.Manifest
 import android.app.Activity
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.prototypeapp.databinding.ActivityHomedashboardBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 
 
 class HomeActivity : AppCompatActivity() {
-
-    companion object{
-        private const val CAMERA_PERMISSION_CODE = 1
-        private const val CAMERA_REQUEST_CODE = 2
-    }
 
     private lateinit var binding: ActivityHomedashboardBinding
     private lateinit var mAuth: FirebaseAuth
@@ -68,12 +64,7 @@ class HomeActivity : AppCompatActivity() {
                         return@setOnItemSelectedListener true
                     }
                     R.id.camnav ->{
-                        if(ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
-                            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA), CAMERA_PERMISSION_CODE)
-                            return@setOnItemSelectedListener  true
-                        }
-                        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-                        startActivityForResult(intent, CAMERA_REQUEST_CODE)
+                        openFragment(CameraFragment())
                         return@setOnItemSelectedListener true
                     }R.id.mailnav ->{
                     openFragment(MailFragment())
@@ -91,44 +82,17 @@ class HomeActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        val intent = Intent(this, LogoutActivity::class.java)
-        startActivity(intent)
+        AlertDialog.Builder(this)
+            .setIcon(android.R.drawable.ic_dialog_alert)
+            .setTitle("Log Out")
+            .setMessage("Are you sure you want to Log Out?")
+            .setPositiveButton("Yes",
+                DialogInterface.OnClickListener { dialog, which -> finish() })
+            .setNegativeButton("No", null)
+            .show()
     }
 
     private fun openFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().disallowAddToBackStack().replace(R.id.homeframelayout, fragment).commit()
     }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-
-        if(requestCode != CAMERA_PERMISSION_CODE){
-            return
-        }
-        if(grantResults.isEmpty() || grantResults[0] != PackageManager.PERMISSION_GRANTED){
-            Toast.makeText(this, "Access not granted", Toast.LENGTH_SHORT).show()
-            return
-        }
-        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        startActivityForResult(intent, CAMERA_REQUEST_CODE)
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if(resultCode != Activity.RESULT_OK){
-            return
-        }
-        if(requestCode != CAMERA_REQUEST_CODE){
-            return
-        }
-        val thumbnail: Bitmap = data!!.extras!!.get("data") as Bitmap
-
-        val intent = Intent(this,CameraActivity::class.java)
-        startActivity(intent)
-    }
-
 }

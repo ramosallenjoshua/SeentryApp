@@ -13,7 +13,6 @@
     <string name="mobile_number">Mobile Number</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="dashboard">Dashboard</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="seentry">Seentry</string>
     <string name="privacy_settings">Privacy Settings</string>
@@ -26,4 +25,10 @@
     <string name="logoutconfirm">Do you wish log out?</string>
     <string name="logoutConfirmText">Yes</string>
     <string name="logoutDenyText">No</string>
+    <string name="takePhoto">Take a Photo</string>
+    <string name="findFolder">Upload from Storage</string>
+    <string name="scanText">Face Scan</string>
+    <string name="uploadClueText">Upload as Clue</string>
+    <string name="takeAnotherPhotoText">Take Another Photo</string>
+    <string name="takenImage_contDes">Taken Image</string>
 </resources>

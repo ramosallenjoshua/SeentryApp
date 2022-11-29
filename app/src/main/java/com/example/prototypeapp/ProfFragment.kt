@@ -20,7 +20,6 @@ class ProfFragment : Fragment() {
 
     private lateinit var binding: FragmentProfBinding
 
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentProfBinding.inflate(inflater, container, false)
 

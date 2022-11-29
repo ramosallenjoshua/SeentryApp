@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NotifFragment">
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -41,7 +44,6 @@
             android:layout_width="370dp"
             android:layout_height="90dp"
             android:layout_gravity="center"
-            android:background=""
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="319dp">
 
@@ -51,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/Pic" />
+                android:background="@drawable/pic" />
 
             <TextView
                 android:id="@+id/message_name"
@@ -87,7 +89,6 @@
             android:layout_width="370dp"
             android:layout_height="90dp"
             android:layout_gravity="center"
-            android:background=""
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="229dp">
 
@@ -97,7 +98,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/Pic" />
+                android:background="@drawable/pic" />
 
             <TextView
                 android:id="@+id/message_name_2"
@@ -132,7 +133,6 @@
             android:layout_width="370dp"
             android:layout_height="90dp"
             android:layout_gravity="center"
-            android:background=""
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="139dp">
 
@@ -142,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/Pic" />
+                android:background="@drawable/pic" />
 
             <TextView
                 android:id="@+id/message_name_3"
@@ -177,7 +177,6 @@
             android:layout_width="370dp"
             android:layout_height="90dp"
             android:layout_gravity="center"
-            android:background=""
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="49dp">
 
@@ -187,7 +186,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/Warning" />
+                android:background="@drawable/warning" />
 
             <TextView
                 android:id="@+id/message_name_4"

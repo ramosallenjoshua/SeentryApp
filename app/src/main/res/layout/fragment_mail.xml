@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#d9d9d9"
-    tools:context=".MailFragment">
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    android:fillViewport="true">
 
     <!-- TODO: Update blank fragment layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -39,7 +40,6 @@
             android:layout_height="90dp"
             android:layout_gravity="center"
             android:layout_marginBottom="15dp"
-            android:background=""
             app:layout_constraintBottom_toBottomOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.487"
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/Pic" />
+                android:background="@drawable/pic" />
 
             <TextView
                 android:id="@+id/message_name"
@@ -84,7 +84,6 @@
             android:layout_height="90dp"
             android:layout_gravity="center"
             android:layout_marginBottom="15dp"
-            android:background=""
             app:layout_constraintBottom_toBottomOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.487"
@@ -98,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/Pic" />
+                android:background="@drawable/pic" />
 
             <TextView
                 android:id="@+id/message_name_2"
@@ -128,7 +127,6 @@
             android:layout_height="90dp"
             android:layout_gravity="center"
             android:layout_marginBottom="15dp"
-            android:background=""
             app:layout_constraintBottom_toBottomOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.487"
@@ -142,7 +140,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/Pic" />
+                android:background="@drawable/pic" />
 
             <TextView
                 android:id="@+id/message_name_3"
@@ -172,7 +170,6 @@
             android:layout_height="90dp"
             android:layout_gravity="center"
             android:layout_marginBottom="15dp"
-            android:background=""
             app:layout_constraintBottom_toBottomOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.487"
@@ -186,7 +183,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/Pic" />
+                android:background="@drawable/pic" />
 
             <TextView
                 android:id="@+id/message_name_4"

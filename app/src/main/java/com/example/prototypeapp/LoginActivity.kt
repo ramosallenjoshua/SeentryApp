@@ -25,6 +25,13 @@ class LoginActivity : AppCompatActivity() {
             val adminemail = "admin"
             val adminpass = "admin"
 
+            //Temp Admin pass for Offline Viewing
+            if(binding.loginEmailEditText.text.toString() == adminemail && binding.loginPasswordEditText.text.toString() == adminpass){
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+                return@setOnClickListener
+            }
+
             if (email.isEmpty() || password.isEmpty()){
                 Toast.makeText(this, "Missing Fields", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -40,11 +47,7 @@ class LoginActivity : AppCompatActivity() {
                 finish()
             }
 
-            //Temp Admin pass for Offline Viewing
-            if(binding.loginEmailEditText.text.toString() == adminemail && binding.loginPasswordEditText.text.toString() == adminpass){
-                val intent = Intent(this, HomeActivity::class.java)
-                startActivity(intent)
-            }
+
         }
     }
 
